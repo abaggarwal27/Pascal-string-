@@ -1,0 +1,7 @@
+struct PascalString* p_create(size_t size) {
+    struct PascalString* p = (struct PascalString*) malloc(sizeof(struct PascalString));
+    p->str = (char*) malloc(size + 1);
+    p->str[0] = '\0';
+    p->len = 0;
+    return p;
+}

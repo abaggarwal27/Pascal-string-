@@ -1,0 +1,7 @@
+struct PascalString* p_strcat(struct PascalString* p1, const struct PascalString* p2) {
+    int newLen = p1->len + p2->len;
+    p1->str = (char*) realloc(p1->str, newLen + 1);
+    strcat(p1->str, p2->str);
+    p1->len = newLen;
+    return p1;
+}

@@ -1,0 +1,4 @@
+void p_destroy(struct PascalString* p) {
+    free(p->str);
+    free(p);
+}

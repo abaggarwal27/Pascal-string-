@@ -1,0 +1,3 @@
+int p_strcmp(const struct PascalString* p1, const struct PascalString* p2) {
+    return strcmp(p1->str, p2->str);
+}

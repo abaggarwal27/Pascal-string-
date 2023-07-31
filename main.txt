@@ -1,0 +1,32 @@
+int main() {
+    // Creating a Pascal string
+    struct PascalString* p = p_create(10);
+    p = p_string("Hello");
+
+    // Reading and writing characters
+    printf("%c\n", p_read(p, 0));
+    p_write(p, 0, 'a');
+    printf("%c\n", p_read(p, 0));
+
+    // Getting the length of a Pascal string
+    printf("Length: %ld\n", p_strlen(p));
+
+    // Comparing two Pascal strings
+    struct PascalString* p2 = p_string("World");
+    printf("strcmp: %d\n", p_strcmp(p, p2));
+
+    // Concatenating two Pascal strings
+    p = p_strcat(p, p2);
+    printf("Concatenated string: %s\n", to_string(p));
+
+    // Copying a Pascal string
+    struct PascalString p3 = p_strcpy(p);
+    printf("Copied string: %s\n", to_string(&p3));
+    
+    //destroy the strings
+    p_destroy(p);
+    p_destroy(p2);
+    p_destroy(&p3);
+
+    return 0;
+}

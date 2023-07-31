@@ -1,0 +1,6 @@
+struct PascalString* p_string(const char* s) {
+    struct PascalString* p = p_create(strlen(s));
+    strcpy(p->str, s);
+    p->len = strlen(s);
+    return p;
+}

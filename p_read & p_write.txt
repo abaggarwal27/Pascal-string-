@@ -1,0 +1,8 @@
+char p_read(const struct PascalString* p, size_t index) {
+    return p->str[index];
+}
+
+void p_write(struct PascalString* p, size_t index, char c)
+ {
+    p->str[index] = c;
+}

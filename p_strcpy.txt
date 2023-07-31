@@ -1,0 +1,7 @@
+struct PascalString p_strcpy(const struct PascalString* p) {
+    struct PascalString newStr;
+    newStr.len = p->len;
+    newStr.str = (char*) malloc(newStr.len + 1);
+    strcpy(newStr.str, p->str);
+    return newStr;
+}

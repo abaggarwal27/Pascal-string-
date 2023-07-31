@@ -1,0 +1,3 @@
+char* to_string(struct PascalString* p) {
+    return p->str;
+}
